@@ -1,0 +1,14 @@
+
+<div [ngClass]="{'nav-visible': isVisible, 'nav-hidden': !isVisible}" class="nav flex flex-row w-screen h-16 fixed opacity-50 ">
+    <div class="ml-24 h-12 w-1/2 mt-5 shadow-md rounded-md flex flex-row justify-evenly items-center backdrop-blur-sm">
+      <a class="font-nav text-xl hover:text-slate-800 font-medium" routerLink="/home">Home</a>
+      <p>|</p>
+      <a class="font-nav text-xl hover:text-slate-800 font-medium" routerLink="/events">Events</a>
+      <p>|</p>
+      <a class="font-nav text-xl hover:text-slate-800 font-medium" routerLink="/pricing">Pricing</a>
+      <p>|</p>
+      <a class="font-nav text-xl hover:text-slate-800 font-medium" routerLink="/about">About us</a>
+    </div>
+  </div>
+  
+  <div class=" backdrop-blur-sm h-12 w-12 shadow-md rounded-b-md fixed ml-5 mt-5 bg-no-repeat bg-cover transition-transform duration-500 ease-in-out" (click)="toggleVisibility()" style="background-image: url(/assets/list.svg);"></div>

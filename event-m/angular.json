@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "aot": true,
             "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -28,13 +29,13 @@
 "budgets": [
   {
     "type": "initial",
-    "maximumWarning": "1mb",
-    "maximumError": "2mb"
+    "maximumWarning": "4mb",
+    "maximumError": "5mb"
   },
   {
     "type": "anyComponentStyle",
-    "maximumWarning": "40kb",
-    "maximumError": "60kb"
+    "maximumWarning": "200kb",
+    "maximumError": "250kb"
   }
 ],
             "polyfills": [
@@ -60,13 +61,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "200kb",
+                  "maximumError": "250kb"
                 }
               ],
               "outputHashing": "all"

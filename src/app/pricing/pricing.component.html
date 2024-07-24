@@ -1,0 +1,159 @@
+<div class="h-screen w-screen  flex flex-col items-center justify-center bg-slate-400">
+    
+    <div class="h-screen items-center card flex justify-content-center bg-white">
+        <p-stepper>
+            <p-stepperPanel header="Baics">
+                <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
+                    <div class="flex flex-column ">
+                        <div class="content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium overflow-scroll">
+                           phone
+                           <hr>
+                           name
+                           <hr>
+                           DOE
+                           <hr>
+
+                     
+                            </div>                      
+                         
+                    </div>
+                    <div class="flex pt-4 justify-content-end">
+                        <p-button 
+                            label="Next" 
+                            icon="pi pi-arrow-right" 
+                            iconPos="right" 
+                            (onClick)="nextCallback.emit()" />
+                    </div>
+                </ng-template>
+            </p-stepperPanel>
+            <p-stepperPanel header="Venue">
+                <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
+                    <div class="flex flex-column h-12rem">
+                        <div class="content h-96 w-3/4 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium">
+                            indoor/outdoor
+                            <hr>
+                            do u want to book Venue
+                            <hr>
+                            total seating capcity
+                            <hr>
+                            do u need a stage
+                        </div>
+                    </div>
+                    <div class="flex pt-4 justify-content-between">
+                        <p-button 
+                            label="Back" 
+                            icon="pi pi-arrow-left" 
+                            (onClick)="prevCallback.emit()" />
+                        <p-button 
+                            label="Next" 
+                            icon="pi pi-arrow-right" 
+                            iconPos="right" 
+                            (onClick)="nextCallback.emit()" />
+                    </div>
+                </ng-template>
+            </p-stepperPanel>
+            <p-stepperPanel header="Food & catering">
+                <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
+                    <div class="flex flex-column h-12rem">
+                        <div class="content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium overflow-scroll">
+                         
+                        
+                       <div class="flex flex-row  justify-evenly     items-center m-5">
+                        <p >Food Plateing</p>
+                        <app-radiobutton opt1="Plate" opt2="Banana Leaf" opt3="Use and Throw" id="1"></app-radiobutton>      
+                        </div> 
+                         <hr>
+                         <div class="flex flex-row  justify-evenly items-center m-5">
+                            <p >Starter</p>
+                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="2"></app-radiobutton>      
+     
+                            </div> 
+                            <app-lists></app-lists>
+                         <hr>
+                         <div class="flex flex-row  justify-evenly items-center m-5">
+                            <p class="">Side Dish</p>
+                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="3"></app-radiobutton>      
+                        </div> 
+                         <hr>
+                         <div class="flex flex-row  justify-evenly items-center m-5 " >
+                            <p >Main Course</p>
+                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="4"></app-radiobutton>      
+                            </div> 
+                         <hr>
+                         <div class="flex flex-row  justify-evenly items-center m-5">
+                            <p >Desert</p>
+                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="5"></app-radiobutton>      
+     
+                            </div> <hr>
+                         other like water , paper
+                        </div>
+                    </div>
+                    <div class="flex pt-4 justify-content-between">
+                        <p-button 
+                            label="Back" 
+                            icon="pi pi-arrow-left" 
+                            (onClick)="prevCallback.emit()" />
+                        <p-button 
+                            label="Next" 
+                            icon="pi pi-arrow-right" 
+                            iconPos="right" 
+                            (onClick)="nextCallback.emit()" />
+                    </div>
+                </ng-template>
+            </p-stepperPanel>
+            <p-stepperPanel header="Decoration">
+                <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
+                    <div class="flex flex-column h-12rem">
+                        <div class=" content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium">
+                            do u need a stage 
+                            <hr>
+                            no of seating
+                            <hr>
+                            air ventilation
+                            <hr>
+                            venue Decoration
+                            <hr>
+                            lights 
+
+                        </div>
+                    </div>
+                    <div class="flex pt-4 justify-content-between">
+                        <p-button 
+                            label="Back" 
+                            icon="pi pi-arrow-left" 
+                            (onClick)="prevCallback.emit()" />
+                        <p-button 
+                            label="Next" 
+                            icon="pi pi-arrow-right" 
+                            iconPos="right" 
+                            (onClick)="nextCallback.emit()" />
+                    </div>
+                </ng-template>
+            </p-stepperPanel>
+            <p-stepperPanel header="Entertainment">
+                <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
+                    <div class="flex flex-column h-12rem">
+                        <div class="content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                            <div class="card flex flex-col justify-content-center gap-3">
+                               oragreata
+                               <hr>
+                               dance
+                               <hr>
+                               magic show
+                               <hr>
+                               stand up coemy
+                               <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex pt-4 justify-content-start">
+                        <p-button 
+                            label="Back" 
+                            icon="pi pi-arrow-left" 
+                            (onClick)="prevCallback.emit()" />
+                    </div>
+                </ng-template>
+            </p-stepperPanel>
+        </p-stepper>
+    </div>
+</div>

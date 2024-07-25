@@ -1,28 +1,23 @@
-<div class="h-screen w-screen  flex flex-col items-center justify-center bg-slate-400">
+<div class="w-screen  flex flex-col items-center justify-center bg-slate-400 relative z-10" style="height: 300vh;">
     
-    <div class="h-screen items-center card flex justify-content-center bg-white">
+    <!-- <div class="h-full w-1/2 items-center card flex justify-content-center mr-10 bg-white"> -->
         <p-stepper>
             <p-stepperPanel header="Baics">
                 <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
                     <div class="flex flex-column ">
-                        <div class="content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium overflow-scroll">
+                        <div class="content h-full border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium overflow-scroll">
                            phone
                            <hr>
                            name
                            <hr>
                            DOE
                            <hr>
-
-                     
                             </div>                      
                          
                     </div>
-                    <div class="flex pt-4 justify-content-end">
-                        <p-button 
-                            label="Next" 
-                            icon="pi pi-arrow-right" 
-                            iconPos="right" 
-                            (onClick)="nextCallback.emit()" />
+                    <div class="flex pt-4 flex-row justify-end">
+                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="nextCallback.emit()"> Next <i class="ph ph-arrow-right"></i></button>
+                       
                     </div>
                 </ng-template>
             </p-stepperPanel>
@@ -39,25 +34,21 @@
                             do u need a stage
                         </div>
                     </div>
-                    <div class="flex pt-4 justify-content-between">
-                        <p-button 
-                            label="Back" 
-                            icon="pi pi-arrow-left" 
-                            (onClick)="prevCallback.emit()" />
-                        <p-button 
-                            label="Next" 
-                            icon="pi pi-arrow-right" 
-                            iconPos="right" 
-                            (onClick)="nextCallback.emit()" />
+                    <div class="flex pt-4 flex-row justify-between">
+                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="prevCallback.emit()">  <i class="ph ph-arrow-left"></i>Back</button>
+                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="nextCallback.emit()"> Next <i class="ph ph-arrow-right"></i></button>
                     </div>
                 </ng-template>
             </p-stepperPanel>
             <p-stepperPanel header="Food & catering">
                 <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
                     <div class="flex flex-column h-12rem">
-                        <div class="content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium overflow-scroll">
+                        <div class="content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium ">
                          
-                        
+                            <div class="flex flex-row  justify-evenly     items-center m-5">
+                                <p class="text-4xl">Food & Catering</p>
+                                </div> 
+                                 <hr>
                        <div class="flex flex-row  justify-evenly     items-center m-5">
                         <p >Food Plateing</p>
                         <app-radiobutton opt1="Plate" opt2="Banana Leaf" opt3="Use and Throw" id="1"></app-radiobutton>      
@@ -72,32 +63,33 @@
                          <hr>
                          <div class="flex flex-row  justify-evenly items-center m-5">
                             <p class="">Side Dish</p>
-                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="3"></app-radiobutton>      
+                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="3"></app-radiobutton>   
                         </div> 
+                        <app-lists></app-lists>   
                          <hr>
                          <div class="flex flex-row  justify-evenly items-center m-5 " >
                             <p >Main Course</p>
-                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="4"></app-radiobutton>      
-                            </div> 
+                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="4"></app-radiobutton>   
+                        </div> 
+                        <app-lists></app-lists>   
                          <hr>
                          <div class="flex flex-row  justify-evenly items-center m-5">
                             <p >Desert</p>
-                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="5"></app-radiobutton>      
-     
-                            </div> <hr>
+                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="5"></app-radiobutton>    
+                            
+                        </div> 
+                        <app-lists></app-lists>  
+                        <hr>
                          other like water , paper
                         </div>
                     </div>
-                    <div class="flex pt-4 justify-content-between">
-                        <p-button 
-                            label="Back" 
-                            icon="pi pi-arrow-left" 
-                            (onClick)="prevCallback.emit()" />
-                        <p-button 
-                            label="Next" 
-                            icon="pi pi-arrow-right" 
-                            iconPos="right" 
-                            (onClick)="nextCallback.emit()" />
+                    <div class="flex pt-4 flex-row justify-between">
+                     
+                            
+                            <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="prevCallback.emit()">  <i class="ph ph-arrow-left"></i>Back</button>
+                            <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="nextCallback.emit()"> Next <i class="ph ph-arrow-right"></i></button>
+
+                
                     </div>
                 </ng-template>
             </p-stepperPanel>
@@ -117,16 +109,9 @@
 
                         </div>
                     </div>
-                    <div class="flex pt-4 justify-content-between">
-                        <p-button 
-                            label="Back" 
-                            icon="pi pi-arrow-left" 
-                            (onClick)="prevCallback.emit()" />
-                        <p-button 
-                            label="Next" 
-                            icon="pi pi-arrow-right" 
-                            iconPos="right" 
-                            (onClick)="nextCallback.emit()" />
+                    <div class="flex pt-4 flex-row justify-between">
+                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="prevCallback.emit()">  <i class="ph ph-arrow-left"></i>Back</button>
+                            <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="nextCallback.emit()"> Next <i class="ph ph-arrow-right"></i></button>
                     </div>
                 </ng-template>
             </p-stepperPanel>
@@ -146,14 +131,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex pt-4 justify-content-start">
-                        <p-button 
-                            label="Back" 
-                            icon="pi pi-arrow-left" 
-                            (onClick)="prevCallback.emit()" />
+                    <div class="flex pt-4 flex-row justify-between">
+                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="prevCallback.emit()">  <i class="ph ph-arrow-left"></i>Back</button>
+                        <button type="button" class="button1" icon="pi pi-arrow-right" style="background-color: #9BEC00; width: 120px;" > Submit <i class="ph ph-notebook"></i></button>
                     </div>
                 </ng-template>
             </p-stepperPanel>
         </p-stepper>
+
+
+
+
+         <div class="h-3/4 w-1/2 mr-32 absolute -z-10 -left-64 -bottom-1/2">
+        <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path fill="#474bff" d="M391,334Q349,428,239.5,429.5Q130,431,73.5,335.5Q17,240,70,138.5Q123,37,233.5,48.5Q344,60,388.5,150Q433,240,391,334Z" />
+        </svg>
+      </div>
     </div>
-</div>
+<!-- </div> -->

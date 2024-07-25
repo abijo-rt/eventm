@@ -14,6 +14,7 @@ export class NavComponent {
   isVisible: boolean = false;
 
   toggleVisibility() {
+ //   alert("hi")
     this.isVisible = !this.isVisible;
     
   }

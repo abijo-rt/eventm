@@ -3,3 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.home{
+    z-index: 10;
+}
+
+@media (max-width: 480px) {
+    .para{
+        height: 10rem;
+        display: inline-block;
+    }
+  }

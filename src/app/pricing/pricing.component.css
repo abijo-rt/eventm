@@ -23,7 +23,8 @@
 
 
 .content{
-height: 110rem;
+height: 50rem;
+overflow:scroll;
 }
 
 

@@ -10,6 +10,7 @@ module.exports = {
     },
     fontFamily: {
       nav: ['"Edu AU VIC WA NT Hand"']
+      
     }
   },
   plugins: [

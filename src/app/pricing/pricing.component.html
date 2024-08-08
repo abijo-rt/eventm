@@ -1,151 +1,204 @@
-<div class="w-screen  flex flex-col items-center justify-center bg-slate-400 relative z-10" style="height: 300vh;">
-    
-    <!-- <div class="h-full w-1/2 items-center card flex justify-content-center mr-10 bg-white"> -->
-        <p-stepper>
-            <p-stepperPanel header="Baics">
-                <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-                    <div class="flex flex-column ">
-                        <div class="content h-full border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium overflow-scroll">
-                           phone
-                           <hr>
-                           name
-                           <hr>
-                           DOE
-                           <hr>
-                            </div>                      
-                         
-                    </div>
-                    <div class="flex pt-4 flex-row justify-end">
-                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="nextCallback.emit()"> Next <i class="ph ph-arrow-right"></i></button>
-                       
-                    </div>
-                </ng-template>
-            </p-stepperPanel>
-            <p-stepperPanel header="Venue">
-                <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
-                    <div class="flex flex-column h-12rem">
-                        <div class="content h-96 w-3/4 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium">
-                            indoor/outdoor
-                            <hr>
-                            do u want to book Venue
-                            <hr>
-                            total seating capcity
-                            <hr>
-                            do u need a stage
-                        </div>
-                    </div>
-                    <div class="flex pt-4 flex-row justify-between">
-                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="prevCallback.emit()">  <i class="ph ph-arrow-left"></i>Back</button>
-                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="nextCallback.emit()"> Next <i class="ph ph-arrow-right"></i></button>
-                    </div>
-                </ng-template>
-            </p-stepperPanel>
-            <p-stepperPanel header="Food & catering">
-                <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
-                    <div class="flex flex-column h-12rem">
-                        <div class="content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium ">
-                         
-                            <div class="flex flex-row  justify-evenly     items-center m-5">
-                                <p class="text-4xl">Food & Catering</p>
-                                </div> 
-                                 <hr>
-                       <div class="flex flex-row  justify-evenly     items-center m-5">
-                        <p >Food Plateing</p>
-                        <app-radiobutton opt1="Plate" opt2="Banana Leaf" opt3="Use and Throw" id="1"></app-radiobutton>      
-                        </div> 
-                         <hr>
-                         <div class="flex flex-row  justify-evenly items-center m-5">
-                            <p >Starter</p>
-                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="2"></app-radiobutton>      
-     
-                            </div> 
-                            <app-lists></app-lists>
-                         <hr>
-                         <div class="flex flex-row  justify-evenly items-center m-5">
-                            <p class="">Side Dish</p>
-                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="3"></app-radiobutton>   
-                        </div> 
-                        <app-lists></app-lists>   
-                         <hr>
-                         <div class="flex flex-row  justify-evenly items-center m-5 " >
-                            <p >Main Course</p>
-                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="4"></app-radiobutton>   
-                        </div> 
-                        <app-lists></app-lists>   
-                         <hr>
-                         <div class="flex flex-row  justify-evenly items-center m-5">
-                            <p >Desert</p>
-                            <app-radiobutton opt1="veg" opt2="non-veg" opt3="none" id="5"></app-radiobutton>    
-                            
-                        </div> 
-                        <app-lists></app-lists>  
-                        <hr>
-                         other like water , paper
-                        </div>
-                    </div>
-                    <div class="flex pt-4 flex-row justify-between">
-                     
-                            
-                            <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="prevCallback.emit()">  <i class="ph ph-arrow-left"></i>Back</button>
-                            <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="nextCallback.emit()"> Next <i class="ph ph-arrow-right"></i></button>
+<div
+  class="w-screen flex flex-col items-center justify-center bg-[#e7f3f7] relative z-10"
+  style="height: 150vh"
+>
+  <!-- <div class="h-full w-1/2 items-center card flex justify-content-center mr-10 bg-white"> -->
+  <p-stepper>
+    <p-stepperPanel header="Baics">
+      <ng-template
+        pTemplate="content"
+        let-nextCallback="nextCallback"
+        let-index="index"
+      >
+        <div class="flex flex-column">
+          <div
+            class="content h-full border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium overflow-scroll"
+          >
+            phone
+            <hr />
+            name
+            <hr />
+            DOE
+            <hr />
+          </div>
+        </div>
+        <div class="flex pt-4 flex-row justify-end">
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            (click)="nextCallback.emit()"
+          >
+            Next <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </ng-template>
+    </p-stepperPanel>
+    <p-stepperPanel header="Venue">
+      <ng-template
+        pTemplate="content"
+        let-prevCallback="prevCallback"
+        let-nextCallback="nextCallback"
+        let-index="index"
+      >
+        <div class="flex flex-column h-12rem">
+          <div
+            class="content h-96 w-3/4 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium"
+          >
+          <app-vendor-card></app-vendor-card>
+          <app-vendor-card></app-vendor-card>
+          <app-vendor-card></app-vendor-card>
+          <app-vendor-card></app-vendor-card>
+          </div>
+        </div>
+        <div class="flex pt-4 flex-row justify-between">
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            (click)="prevCallback.emit()"
+          >
+            <i class="ph ph-arrow-left"></i>Back
+          </button>
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            (click)="nextCallback.emit()"
+          >
+            Next <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </ng-template>
+    </p-stepperPanel>
+    <p-stepperPanel header="Food & catering">
+      <ng-template
+        pTemplate="content"
+        let-prevCallback="prevCallback"
+        let-nextCallback="nextCallback"
+        let-index="index"
+      >
+        <div class="flex flex-column h-12rem">
+          <div
+            class="content h-96 border-2 border-dashed surface-border border-round bg-[#e9eaee] flex-auto flex flex-col font-medium"
+          >
+          <app-vendor-card></app-vendor-card>
+          <app-vendor-card></app-vendor-card>
+          <app-vendor-card></app-vendor-card>
+          <app-vendor-card></app-vendor-card>
+        </div>
+        </div>
+        <div class="flex pt-4 flex-row justify-between">
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            (click)="prevCallback.emit()"
+          >
+            <i class="ph ph-arrow-left"></i>Back
+          </button>
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            (click)="nextCallback.emit()"
+          >
+            Next <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </ng-template>
+    </p-stepperPanel>
+    <p-stepperPanel header="Decoration">
+      <ng-template
+        pTemplate="content"
+        let-prevCallback="prevCallback"
+        let-nextCallback="nextCallback"
+        let-index="index"
+      >
+        <div class="flex flex-column ">
+          <div
+            class="content h-fit border-2 border-dashed flex-grow flex space-y-4 flex-col font-medium p-12 bg-[#e9eaee]"
+          >
+          <app-vendor-card name="Amar food cater" address="address1" type="food"></app-vendor-card>
+          <app-vendor-card name="abijo food cater" address="address1" type="caters"></app-vendor-card>
+          <app-vendor-card name="ventak food cater" address="address1" type="docoratoe" ></app-vendor-card>
+          <app-vendor-card name="Dhari food cater" address="address1" type="food"></app-vendor-card>
+          </div>
+        </div>
+        <div class="flex pt-4 flex-row justify-between">
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            (click)="prevCallback.emit()"
+          >
+            <i class="ph ph-arrow-left"></i>Back
+          </button>
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            (click)="nextCallback.emit()"
+          >
+            Next <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </ng-template>
+    </p-stepperPanel>
+    <p-stepperPanel header="Entertainment">
+      <ng-template
+        pTemplate="content"
+        let-prevCallback="prevCallback"
+        let-index="index"
+      >
+        <div class="flex flex-column h-12rem">
+          <div
+            class="content h-96 border-2 py-5 border-dashed surface-border border-round space-y-4 bg-[#e9eaee] flex-auto flex flex-col font-medium"
+          >
+              <app-vendor-card name="Amar food cater" address="address1" type="food"></app-vendor-card>
+              <app-vendor-card name="abijo food cater" address="address1" type="caters"></app-vendor-card>
+              <app-vendor-card name="ventak food cater" address="address1" type="docoratoe" ></app-vendor-card>
+              <app-vendor-card name="Dhari food cater" address="address1" type="food"></app-vendor-card>
+         
+          </div>
+        </div>
+        <div class="flex pt-4 flex-row justify-between">
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            (click)="prevCallback.emit()"
+          >
+            <i class="ph ph-arrow-left"></i>Back
+          </button>
+          <button
+            type="button"
+            class="button1"
+            icon="pi pi-arrow-right"
+            style="background-color: #9bec00; width: 120px"
+          >
+            Submit <i class="ph ph-notebook"></i>
+          </button>
+        </div>
+      </ng-template>
+    </p-stepperPanel>
+  </p-stepper>
 
-                
-                    </div>
-                </ng-template>
-            </p-stepperPanel>
-            <p-stepperPanel header="Decoration">
-                <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
-                    <div class="flex flex-column h-12rem">
-                        <div class=" content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex flex-col font-medium">
-                            do u need a stage 
-                            <hr>
-                            no of seating
-                            <hr>
-                            air ventilation
-                            <hr>
-                            venue Decoration
-                            <hr>
-                            lights 
+  <div class="h-3/4 w-1/2 mr-32 absolute -z-10 -left-64 -bottom-1/2">
+    <svg
+      id="10015.io"
+      viewBox="0 0 480 480"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <path
+        fill="#474bff"
+        d="M391,334Q349,428,239.5,429.5Q130,431,73.5,335.5Q17,240,70,138.5Q123,37,233.5,48.5Q344,60,388.5,150Q433,240,391,334Z"
+      />
+    </svg>
+  </div>
+  <div class="w-screen">
 
-                        </div>
-                    </div>
-                    <div class="flex pt-4 flex-row justify-between">
-                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="prevCallback.emit()">  <i class="ph ph-arrow-left"></i>Back</button>
-                            <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="nextCallback.emit()"> Next <i class="ph ph-arrow-right"></i></button>
-                    </div>
-                </ng-template>
-            </p-stepperPanel>
-            <p-stepperPanel header="Entertainment">
-                <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-                    <div class="flex flex-column h-12rem">
-                        <div class="content h-96 border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                            <div class="card flex flex-col justify-content-center gap-3">
-                               oragreata
-                               <hr>
-                               dance
-                               <hr>
-                               magic show
-                               <hr>
-                               stand up coemy
-                               <hr>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex pt-4 flex-row justify-between">
-                        <button type="button" class="button1" icon="pi pi-arrow-right"  (click)="prevCallback.emit()">  <i class="ph ph-arrow-left"></i>Back</button>
-                        <button type="button" class="button1" icon="pi pi-arrow-right" style="background-color: #9BEC00; width: 120px;" > Submit <i class="ph ph-notebook"></i></button>
-                    </div>
-                </ng-template>
-            </p-stepperPanel>
-        </p-stepper>
-
-
-
-
-         <div class="h-3/4 w-1/2 mr-32 absolute -z-10 -left-64 -bottom-1/2">
-        <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path fill="#474bff" d="M391,334Q349,428,239.5,429.5Q130,431,73.5,335.5Q17,240,70,138.5Q123,37,233.5,48.5Q344,60,388.5,150Q433,240,391,334Z" />
-        </svg>
-      </div>
-    </div>
+</div>
+</div>
 <!-- </div> -->

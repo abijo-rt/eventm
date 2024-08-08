@@ -5,10 +5,11 @@ import { StepperModule } from 'primeng/stepper';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RadiobuttonComponent } from '../ui/radiobutton/radiobutton.component';
 import { ListsComponent } from '../ui/lists/lists.component';
+import { VendorCardComponent } from '../vendor-card/vendor-card.component';
 @Component({
   selector: 'app-pricing',
   standalone: true,
-  imports: [StepperModule,ButtonModule,CheckboxModule,RadioButtonModule,RadiobuttonComponent,ListsComponent],
+  imports: [VendorCardComponent,StepperModule,ButtonModule,CheckboxModule,RadioButtonModule,RadiobuttonComponent,ListsComponent],
   templateUrl: './pricing.component.html',
   styleUrl: './pricing.component.css'
 })
